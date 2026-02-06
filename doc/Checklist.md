@@ -9,6 +9,7 @@
 - [ ] **Conceptualisations**
 - [ ] **Decision Table**
 - [ ] **Basic Plan - Gantt Chart**
+    - https://docs.google.com/spreadsheets/d/1Ui5CqO9LXlo5OME9tFne_e-ai2fUoh3hpXCWUBuXLiE/edit?usp=sharing
 - [ ] **Aesthetic & Functional Prototypes**
 - [ ] **Design for Manufacture & Assembly**
 - [ ] **Test Plan**
