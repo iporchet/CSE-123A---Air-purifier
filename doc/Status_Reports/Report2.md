@@ -26,3 +26,12 @@ Going to move forward with documentation and with the coding aspect of the proje
 
 - [ ] Eduardo Dominguez-Sotelo
 	Did research on the SEN54. Created a schematic for conceptualization. This was a small drawing with components pointing to each other, showing the flow of the air purifier and the electronics outside of the purifier. This is just an overall schematic and doesn’t go into detail about specific placement. My goals are to keep researching how to implement sensor readings from the sen54, specifically, and research how our mobile app can interact with our Raspberry Pi/microcontroller.
+    
+- **Ugo**
+	- Migrated project documents into the github repository for greater visibility amoung teammates
+    - Future:
+        - Order component/sensors for the projcet
+        - Work on the decision table 
+        - Work on other checklist items
+        - set up kanban with the professor
+    
