@@ -3,6 +3,13 @@
 - [ ] **Personas**
   - **David (Hobbyist):**
     - *Profile* - 30 years old, maintains a maker space for his DIY projects. Wants to have a convenient way to be safe as he completes projects.
+
+Rachel (Teacher):
+Profile: Limited Budget
+
+Ben (Grad Student):
+Profile: Needs to have an exact measurement of the air quality for his project 
+
 - [ ] **Need Statement**
 - [ ] **Goal Statement**
 - [ ] **Design Objective**
