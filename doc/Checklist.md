@@ -11,10 +11,10 @@ Ben (Grad Student):
 Profile: Needs to have an exact measurement of the air quality for his project 
 
 - [ ] **Need Statement**
-- [ ] General air purifiers need to be managed in-person and are unable to report on current air quality statistics.
+      General air purifiers need to be managed in-person and are unable to report on current air quality statistics.
 
 - [ ] **Goal Statement**
-- [ ] Create an energy-efficient autonomous smart air purifier that isn’t reliant on manual control
+      Create an energy-efficient autonomous smart air purifier that isn’t reliant on manual control
 
 - [ ] **Design Objective**
 - [ ] **Conceptualisations**
