@@ -14,3 +14,8 @@ Going to move forward with documentation and with the coding aspect of the proje
 
 - [ ] Andrew
       More research into consumer data sheets to prep for our design documentation. Also begin thinking of mock test plans. 
+
+
+
+- [ ] Eduardo Dominguez-Sotelo
+	Did research on the SEN54. Created a schematic for conceptualization. This was a small drawing with components pointing to each other, showing the flow of the air purifier and the electronics outside of the purifier. This is just an overall schematic and doesn’t go into detail about specific placement. My goals are to keep researching how to implement sensor readings from the sen54, specifically, and research how our mobile app can interact with our Raspberry Pi/microcontroller.
