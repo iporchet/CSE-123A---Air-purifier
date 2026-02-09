@@ -15,7 +15,7 @@
       
 
 - [ ] **Goal Statement**
-      :Create an energy-efficient autonomous smart air purifier that isn’t reliant on manual control
+    - Create an energy-efficient autonomous smart air purifier that isn’t reliant on manual control
 
 - [ ] **Design Objective**
     - Objective: Design an efficient, autonomous smart air purifier that reports air quality statistics,can dynamically adjust filtration based on pollutant levels (Particle Matter), and is cost effective to manufacture and maintain for hobbyists and classrooms.
