@@ -11,7 +11,7 @@
     - Profile: Needs to have an exact measurement of the air quality for his project 
 
 - [ ] **Need Statement**
-
+    - General air purifiers need to be managed in-person and are unable to report on current air quality statistics.
       
 
 - [ ] **Goal Statement**
