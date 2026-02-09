@@ -17,8 +17,6 @@ Profile: Needs to have an exact measurement of the air quality for his project
       :Create an energy-efficient autonomous smart air purifier that isn’t reliant on manual control
 
 - [ ] **Design Objective**
-- [ ] **Conceptualisations**
-- [ ] **Decision Table**
     - Objective: Design an efficient, autonomous smart air purifier that reports air quality statistics,can dynamically adjust filtration based on pollutant levels (Particle Matter), and is cost effective to manufacture and maintain for hobbyists and classrooms.
 
       | Design Objective | Units | Target / Range |
@@ -28,6 +26,8 @@ Profile: Needs to have an exact measurement of the air quality for his project
       | Noise Level | Decibels (dB) | 35 - 50 |
       | Filter Replacement Time | Minutes | < 1 |
       | Filter Lifespan | Hours | 2000 - 8000 |
+- [ ] **Conceptualisations**
+- [ ] **Decision Table**
 - [ ] **Basic Plan - Gantt Chart**
     - https://docs.google.com/spreadsheets/d/1Ui5CqO9LXlo5OME9tFne_e-ai2fUoh3hpXCWUBuXLiE/edit?usp=sharing
 - [ ] **Aesthetic & Functional Prototypes**
