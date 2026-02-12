@@ -28,6 +28,7 @@
       | Filter Replacement Time | Minutes | < 1 |
       | Filter Lifespan | Hours | 2000 - 8000 |
 - [ ] **Conceptualisations**
+    -![Conceptualization Drawing](../doc/Conceptualization/First_Concept.png)
 - [ ] **Decision Table**
 - [ ] **Basic Plan - Gantt Chart**
     - https://docs.google.com/spreadsheets/d/1Ui5CqO9LXlo5OME9tFne_e-ai2fUoh3hpXCWUBuXLiE/edit?usp=sharing

@@ -21,7 +21,7 @@
 - **Isaiah**
 	- Worked on a draft CAD model in which the design included components we plan on using. The model consists of 3 parts, a part for the filtration part, an area for reading and collecting sensor data, and an area dedicated to housing electronics. 
 
-- [ ] Eduardo Dominguez-Sotelo
+- **Eduardo Dominguez-Sotelo**
 	Did research on the SEN54. Created a schematic for conceptualization. This was a small drawing with components pointing to each other, showing the flow of the air purifier and the electronics outside of the purifier. This is just an overall schematic and doesn’t go into detail about specific placement. My goals are to keep researching how to implement sensor readings from the sen54, specifically, and research how our mobile app can interact with our Raspberry Pi/microcontroller.
     
 - **Ugo**
