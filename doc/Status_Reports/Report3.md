@@ -9,8 +9,9 @@ Individual Work
 
 - **Randall**
 - Worked on:
-  	-During this period, the team finalized the system architecture for the air purifier and clarified hardware responsibilities. We completed the selection process for the primary sensing components, focusing on particulate matter sensors and environmental sensors to ensure accurate air quality monitoring.
-  	-We researched and compared microcontroller options and confirmed the use of the ESP32 due to its integrated Wi-Fi, sufficient processing capability, and low power consumption. Initial firmware development has begun, including:
+
+	-During this period, the team finalized the system architecture for the air purifier and clarified hardware responsibilities. We completed the selection process for the primary sensing components, focusing on particulate matter sensors and environmental sensors to ensure accurate air quality monitoring.
+	-We researched and compared microcontroller options and confirmed the use of the ESP32 due to its integrated Wi-Fi, sufficient processing capability, and low power consumption. Initial firmware development has begun, including:
   	-Establishing serial communication between the ESP32 and the PM sensor
 
   	-Testing sensor data acquisition and validating output ranges
