@@ -1,16 +1,11 @@
 # Status Report 3
 
 Summary
-<<<<<<< HEAD
-
-- Created github project: <https://github.com/users/iporchet/projects/1>
-=======
   - Created github project: https://github.com/users/iporchet/projects/1
   - Sent BOM to BELS and collected parts that they already had. This included ESP32c3, RPi4, breakout board, barrel jack converter.
   - Learned how to use KANBAN boards on github. 
   - Created high level schematic of air purifier
  
->>>>>>> 9be81e109fcbb15815855ba54bc1c2dd9e317741
 
 Individual Work
 
@@ -58,15 +53,14 @@ Individual Work
     - Continue printing enclosure parts
 
 - **Eduardo Dominguez-Sotelo**
-
+    - Worked on:
+      - Did research on other DIY air purifiers people have made on their own.
+      - Did research on potential ways to host our mobile app/web app.
+    - Future Work:
+      - Set up a template for the application
+      - Add work to the backlog
+      - Document each step more effectively
 - **Ugo**
-<<<<<<< HEAD
-  - Worked on:
-    - Did research on the air purfiers in the market to create a well informed design objective.
-  - Future work:
-    - Create a decision table
-    - Design how the MCU will interact with other devices
-=======
     - Worked on:
         - Did research on the air purfiers in the market to create a well informed design objective. 
     - Future work:
@@ -76,4 +70,3 @@ Individual Work
 
 	
 	
->>>>>>> 9be81e109fcbb15815855ba54bc1c2dd9e317741
