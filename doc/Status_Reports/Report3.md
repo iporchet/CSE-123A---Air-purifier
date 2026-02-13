@@ -2,9 +2,11 @@
 
 Summary
   - Created github project: https://github.com/users/iporchet/projects/1
+  - Gannt Chart: https://docs.google.com/spreadsheets/d/1Ui5CqO9LXlo5OME9tFne_e-ai2fUoh3hpXCWUBuXLiE/edit?usp=sharing
   - Sent BOM to BELS and collected parts that they already had. This included ESP32c3, RPi4, breakout board, barrel jack converter.
   - Learned how to use KANBAN boards on github. 
   - Created high level schematic of air purifier
+  
  
 
 Individual Work
@@ -15,6 +17,7 @@ Individual Work
 		- Went to BELS to get parts that they already had. (ESP32c3, RPi4, breakout board, barrel jack converter)
 		- Created skeleton code for esp32c3 firmware.
 		- Created tasks for backlog
+		- Updated Gannt Chart
 	- Future Work:
 	 	- Add more tasks to backlog
 		- Do more research on other air purifiers
