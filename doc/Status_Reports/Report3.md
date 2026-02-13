@@ -14,9 +14,8 @@ Individual Work
 
 - 	Testing sensor data acquisition and validating output ranges
   
-- 	Future Work
-
--	The next phase will focus on system integration and performance optimization. Key objectives include:
+- 	Future Work:
+	- The next phase will focus on system integration and performance optimization. Key objectives include:
 
 -	Integrating the PM sensor with real-time fan control logic
 
