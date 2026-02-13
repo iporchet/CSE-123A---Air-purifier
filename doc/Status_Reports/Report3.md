@@ -10,6 +10,13 @@ Individual Work
 - **Randall**
 
 - **Andrew**
+	- Workded on:
+		- Drafted a mock test plan for reduction of particle matter effectiveness.
+	- Future Work:
+ 		- Refine Formal and Null Hypotheses
+   		- Figure out administrative details (location & time)
+     	- Draft other test plans for additional configurartions
+		- Add to github backlog
 
 - **Isaiah**
 	
