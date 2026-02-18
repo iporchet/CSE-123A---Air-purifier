@@ -1,4 +1,4 @@
-## Test Plans Outline:
+## Test Plans Outline
 
 • Scope:  
 • Identify the system and goal/purpose of each test  
@@ -35,7 +35,7 @@
 • Example:  
 “There will be no difference in the percentage failures between samples that were heat-treated, and those that were not.”
 
-## 
+##
 
 ## Test Variables
 
@@ -53,7 +53,7 @@
 Scope
 
 - Testing the reduction of particle matter concentration with a goal of achieving an IAQI equivalent to AQI \< 50\. Also testing if the system adjusts dynamically based on pollutant levels and if the system can outperform natural ventilation  
-- 
+-
 
 | Parameter | Justification |
 | :---- | :---- |
@@ -62,7 +62,7 @@ Scope
 | PM 10 |  |
 | Time to IAQI \>= 81 |  |
 
-- Expect higher fan speeds to reduce particulate concentration faster, and for the system to return to IAQI \>= 81 within half an hour after the pollutant is introduced. And natural ventilation should show significantly slower decay rates in comparison. 
+- Expect higher fan speeds to reduce particulate concentration faster, and for the system to return to IAQI \>= 81 within half an hour after the pollutant is introduced. And natural ventilation should show significantly slower decay rates in comparison.
 
 Administrative Details:
 
@@ -71,7 +71,7 @@ Administrative Details:
 - Conducted by:
 
 Design of Experiment:  
-Two-factor experiment: 
+Two-factor experiment:
 
 - Factor 1: Fan Mode  
 - Factor 2: Ventilation Condition
@@ -79,7 +79,7 @@ Two-factor experiment:
 Method
 
 - Controlled pollutant decay experiment using incense/aerosols/air fresheners as a repeatable particulate source.  
-- Simulate real-world indoor pollutant events and provide statistical repeatability. 
+- Simulate real-world indoor pollutant events and provide statistical repeatability.
 
 Apparatus
 
@@ -97,7 +97,7 @@ Variables
 
 Procedure
 
-- Same environment used for all trials   
+- Same environment used for all trials
 - One incense stick burned for exactly 20 minutes  
 - Purifier activated  
 - Measurements taken every minute or so  
@@ -123,5 +123,57 @@ Data Collection Method
 
 External Factors Recorded
 
-- Room temp and humidity   
+- Room temp and humidity
 - Current ventilation condition
+
+## **Responsiveness Test**
+
+Scope:
+
+- Testing the responsiveness of the system to dynamically adjust filtration based on air quality readings
+
+| Parameter | Justification |
+| :---- | :---- |
+| PM 1.0 |  |
+| PM 2.5  |  |
+| PM 10 |  |
+| TVOC  |  |
+| Time to IAQI \>= 81 |  |
+
+- It is expected that when pollutants are introduced, the system will adjust fan speed to properly filter pollutants. If predominantly VOCs are detected, the system should adjust to so that filtering through the activated carbon filter is prioritized. If predominantly particulate matter is detected, the system should adjust to prioritize filtering through the HEPA filter.
+
+Administrative Details:
+
+- Date: TBD; Location: TBH
+- Requested by:
+- Conducted by:
+
+Design of Experiment:
+
+- Two factor experiment:
+  - Factor 1: Fan speed/mode
+  - Factor 2: Pollutant type (particulate vs VOC)
+
+Method:
+
+- System sensitivity test utilizing controlled pollutant introduction and monitoring system response.
+
+Apparatus:
+
+- In a Filter cartridge prototype, the PWM fans will placed in series with the HEPA H13 filter being place in between them. The filter will be placed with the activated carbon side facing towards the intake of the system. The overall sys
+
+Variables
+ -
+
+Procedure
+ -
+
+Step-by-Step Procedure
+ -
+
+Data Collection Method
+ -
+
+External Factors Recorded
+ -
+
