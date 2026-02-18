@@ -126,6 +126,46 @@ External Factors Recorded
 - Room temp and humidity
 - Current ventilation condition
 
+## **Fan Configuration Test**
+
+Scope:
+
+- Comparing the effectiveness of series vs parallel fans in reducing PM concentrations and VOCs
+
+| Parameter | Justification |
+| :---- | :---- |
+
+Expectations
+ -
+
+Administrative Details:
+
+- Date: TBD; Location: TBH
+- Requested by:
+- Conducted by:
+
+Design of Experiment
+ -
+
+Method:
+
+Apparatus:
+
+- Two different testing rigs will be constructed with one that places the fans in series with the filter in between and another that places the fans in parallel with the filters below. Both rigs will be tested under the same conditions to compare their effectiveness.
+
+Variables
+
+- Fan configuration (series vs parallel)
+- Ventilation condition
+- PM(1.0/ 2.0 /10) concentration
+- TVOC concentration
+
+Procedure
+  1.
+
+Step-by-Step Procedure
+  1.
+
 ## **Responsiveness Test**
 
 Scope:
@@ -160,20 +200,77 @@ Method:
 
 Apparatus:
 
-- In a Filter cartridge prototype, the PWM fans will placed in series with the HEPA H13 filter being place in between them. The filter will be placed with the activated carbon side facing towards the intake of the system. The overall sys
+- In a Filter cartridge prototype, the PWM fans will placed in series with the HEPA H13 filter being place in between them. The filter will be placed with the activated carbon side facing towards the intake of the system.
 
-Variables
+Variables:
+
+- Fan Speeds/Mode
+- Pollutant Type (Particulate vs VOC)
+- Ventilation Condition
+- Distance from pollutant source
+
+Procedure:
+
+1. Introduce controlled amounts of particulate matter (incense/aerosol) or VOCs (air freshener)
+2. Allow pollutant levels to stabilize for 1 minute
+3. Time system's response time to adjust fan speed and filter priority based on pollutant type
+4. Adjust pollutant distance from the system
+5. Repeat for both pollutant types
+6. Also perform baseline test to compare effectiveness of system against a constant fan speed
+
+Step-by-Step Procedure:
+
+1. Measure and record baseline PM, TVOC, and IAQI
+2. Have the fan located at <x> distance from the pollutant source
+3. Introduce pollutant to environment and time how long it takes for the system to adjust fan speed and filter priority
+4. Record once system has adjusted
+5. Record how long it takes for air quality to return to normal levels
+
+Data Collection Method:
+
+- Utilizing sensor readings and ESP32 log data to acquire timestamps of events
+
+External Factors Recorded:
+
+- Room temperature and humidity
+- Natural ventilation condition
+- Baseline pollutant levels before introduction of pollutants
+
+## Power Consumption Test
+
+Scope:
+
+- Test the power consumption of the system with constant fan speeds as well as dynamically adjusting fan speeds based on pollutant levels.
+
+| Parameter | Justification |
+| :---- | :---- |
+| PM 1.0 |  |
+| PM 2.5  |  |
+| PM 10 |  |
+| TVOC  |  |
+| Time to IAQI \>= 81 |  |
+
+Expectations
  -
 
-Procedure
- -
+Administrative Details:
 
-Step-by-Step Procedure
- -
+- Date: TBD; Location: TBH
+- Requested by:
+- Conducted by:
 
-Data Collection Method
- -
+Design of Experiment:
 
-External Factors Recorded
- -
+Method:
 
+Apparatus:
+
+Variables:
+
+Procedure:
+
+Step-by-Step Procedure:
+
+Data Collection Method:
+
+External Factors Recorded:
