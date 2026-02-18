@@ -91,7 +91,70 @@ To enable remote monitoring, the RPi4 would need to forward data to a cloud serv
 
 | Approach | Description | Trade-off |
 |:---|:---|:---|
-| Cloud relay (Firebase, AWS IoT, MQTT broker) | RPi4 pushes data to a cloud endpoint; app 
+| Cloud relay (Firebase, AWS IoT, MQTT broker) | RPi4 pushes data to a cloud endpoint; app reads from cloud | Most practical; requires internet and a cloud account |
+| Port forwarding / Dynamic DNS | Expose the RPi4 API to the public internet | Simple but has security risks; depends on router config |
+| VPN (Tailscale, WireGuard) | Place RPi4 and phone on the same virtual private network | No cloud needed; requires setup on both ends |
+
+### Cloud Service Comparison
+
+#### Firebase (Google)
+
+**Pros:**
+- Realtime Database pushes updates to mobile clients instantly via SDK — no polling needed
+- Generous free tier (1GB stored, 10GB/month transfer)
+- Mature React Native SDK with minimal setup
+- No custom server code needed — RPi4 pushes via REST API, app subscribes via SDK
+
+**Cons:**
+- Vendor lock-in to Google ecosystem
+- Pricing can spike with frequent writes (every 5 seconds adds up over time)
+- Limited query capabilities compared to a relational database
+- NoSQL/JSON data structure can get unwieldy for time-series data
+
+#### AWS IoT Core
+
+**Pros:**
+- Purpose-built for IoT devices — native MQTT support, device shadows, rules engine
+- Scales to millions of devices
+- Can pipe data into DynamoDB, S3, or Lambda for processing
+- Industry standard for commercial IoT products
+
+**Cons:**
+- Steep learning curve (IAM roles, policies, certificates, thing registries)
+- Overkill for a single-device project
+- Free tier limited to 250k messages/month for 12 months, then pay-per-message
+- More glue code required for mobile app integration
+
+#### MQTT Broker (HiveMQ Cloud, Mosquitto, Adafruit IO)
+
+**Pros:**
+- MQTT is the standard IoT protocol — lightweight, low-bandwidth, pub/sub model
+- HiveMQ Cloud free tier: 100 connections, 10GB/month
+- Adafruit IO is beginner-friendly with built-in dashboards
+- ESP32 has excellent MQTT library support (`PubSubClient`, `AsyncMqttClient`)
+
+**Cons:**
+- MQTT alone does not store data — a separate database is needed for history
+- Adafruit IO free tier is very limited (30 data points/minute, 5 feeds)
+- Mobile app needs an MQTT client library, which is less common than REST
+- HiveMQ requires managing your own data persistence
+
+#### Supabase
+
+**Pros:**
+- Open-source Firebase alternative backed by a real Postgres database
+- SQL queries for historical data are far more powerful than Firebase
+- Free tier: 500MB database, 5GB bandwidth, 2 projects
+- REST API auto-generated from table schema — RPi4 or ESP32 can POST directly
+- Realtime subscriptions for the mobile app
+
+**Cons:**
+- Smaller community than Firebase or AWS
+- Not specifically designed for IoT — no device management features
+- Realtime feature can have slightly higher latency than Firebase
+
+
+---
 
 ## Pin Configuration (ESP32-C3)
 
