@@ -57,7 +57,7 @@
   * Defined Parameters & Justification
 
        Parameter | Justification
-       :--- | :---:
+       :--- | :---
        PM 1.0 | Captures ultrafine particulates; useful for combustion/aerosol characterization and size-dependent decay
        PM 2.5 | Primary health-impact metric per EPA standards
        PM 4.0 | Intermediate particle bin to observe size-dependent settling/removal behavior
@@ -66,7 +66,6 @@
        Temperature | Affects sensor response and air density; controls for environmental drift
        Relative Humidity | Influences particle growth/aggregation and VOC sensor behavior
        Time | Required to estimate decay constant and air exchange rate baseline
-
 
     * Hypothesis
 
@@ -93,8 +92,6 @@
         * _Number of Samples:_ Record data every 5 seconds or so for ~45 mins, repeat experiment 3 times.
      
 * Detailed Procedure:
-    * _Safety Precautions:_ Avoid open flames and keep room ventilation airways clear.
- 
     1. Measure & record room dimensions.
     2. Ensure doors are closed.
     3. Take note of active HVAC (turn off is possible).
@@ -106,10 +103,10 @@
     7. Record PM1.0, PM2.5, PM4.0, PM10, VOC, temperature, humidity continuously.
     8. After ~45 mins save data.
     9. Repeat for additional trials.
-
+ 
+    * _Safety Precautions:_ Avoid open flames and keep room ventilation airways clear.
     * _Observation of External Factors:_ Door openings throughout testing; room temp/humidity; HVAC status
 
-* Design of Experiment:
 
 ##
   
@@ -122,7 +119,7 @@
 
     * Defined Parameters & Justification
        Parameter | Justification
-       :--- | :---:
+       :--- | ---
        PM 1.0 | Tracks ultrafine particulate removal; helps compare size-dependent efficiency across modes
        PM 2.5 | Primary health-impact metric per EPA standards
        PM 4.0 | Intermediate particulate bin for size-dependent efficiency assessment
@@ -162,21 +159,18 @@
         * _Number of Samples:_ Record data every 5 seconds or so until concentration falls below 10% of initial value, repeat experiment 3 times for each fan speed. 
 
 * Detailed Procedure:
-    * _Safety Precautions:_ Use approved particulate sources aka avoid open flames. Ensure fire alarms aren't triggered, use proper mask protections and keep room ventilation airways clear.
- 
     1. Measure & record room dimensions.
     2. Ensure doors are closed.
     3. Take note of active HVAC (turn off is possible).
     4. Place sensors:
- 
+
+    * _Safety Precautions:_ Use approved particulate sources aka avoid open flames. Ensure fire alarms aren't triggered, use proper mask protections and keep room ventilation airways clear.
     * _Observation of External Factors:_
-
-
 
 
 ##
   
-** Noise Emission Test**
+**Noise Emission Test**
 ------
 * Scope:
 * Administrative Details:
