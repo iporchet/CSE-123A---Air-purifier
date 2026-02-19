@@ -1,50 +1,48 @@
 #### Test Plans Outline
-
-• Scope:  
-    • Identify the system and goal/purpose of each test  
-    • Define parameters for each test and justify inclusion  
-    • State expectations of the test ( the Hypothesis \- see later slide )  
-• Administrative Details:  
-    • Date and Location of Testing  
-    • Client or Organization that requested the test  
-    • Who is conducting the test  
-• Design of each test (a.k.a. Design of Experiment)  
-    • Type of testing method and its significance  
-    • List of test apparatus and measurement equipment, model \#s, etc…  
-    • Identify ‘dependent’ and ‘independent’ variables ( see later slide )  
-    • Number of factors considered (single, double (factorial), etc.)  
-    • Sampling procedure:  
-        • How are samples obtained?  
-        • Number of samples  
-• Detailed, step-by-step procedure to conduct each test  
-    • Safety precautions  
-    • Data collection method  
-        • Written, recorded, digital, etc.  
-    • Observation of external factors  
-        • Temperature, wind, noise, vibration, etc.
+- Scope:
+    * Identify the system and goal/purpose of each test
+    * Define parameters for each test and justify inclusion
+    * State expectations of the test ( the Hypothesis )
+- Administrative Details:
+    * Date & Location of Testing
+    * Client or Organization that required the Test
+    * Who is conducting the Test
+- Design of each Test (a.k.a. Design of Experiment)
+    * Type of Testing method and its significance
+    * List of Test apparatus and measurement equipment, model \#s, etc.
+    * Identify 'dependent' and 'independent' variables
+    * Number of factors considered (single, double (factorial), etc.)
+    * Sampling procedure:
+        * How are samples obtained?
+        * Number of samples
+- Detailed, Step-by-Step procedure to conduct each Test
+    * Safety precautions
+    * Data collection method
+        * Written, recorded, digital, etc.
+    * Observation of external factors
+        Temperature, wind, noise, vibration, etc.
 
 #### *Design Of Engineering Experiments*
-
-• Formal Hypothesis:  
-• A formal statement of what the experimenter expects to find in the data  
-• Example:  
-“Heat treatment of a material sample will lower the percentage of sample failures under load.”  
-• Null Hypothesis:  
-• A Hypothesis stated in a null form  
-• More easily testable than a formal hypothesis  
-• Example:  
-“There will be no difference in the percentage failures between samples that were heat-treated, and those that were not.”
+- Formal Hypothesis:
+    * A formal statement what the experimenter expects to find in the data
+    * Example:
+        * "Heat treatment of a material sample will lower the percentage of sample failures under load."
+- Null Hypothesis:
+    * A Hypothesis stated in a null form
+        * More easily testable than a formal hypothesis
+    * Example:
+        * "There will be no difference in the percentage failures between samples that were heat-treated, and those that were not.”
 
 #### *Test Variables*
+- Independent Variable:
+    * Is a controllable experimental variable
+    * By changing an Independent Variable, we seek to see if that contributes to a change in a Dependent Variable
+- Dependent Variable (Response Variable):
+    * A characteristic outcome of an experiment on which information is to be gathered or obtained
+    * The outcomes of a true experiment should be random, so a dependent variable is implicitly a random variable
+    * There is a probability distribution associated with different kinds of random variables:
+        * Normal, Poisson, Binomial, etc.
 
-• Independent Variable:  
-    • Is a controllable experimental variable  
-    • By changing an Independent Variable, we seek to see if that contributes to a change in a Dependent Variable  
-• Dependent Variable (Response Variable):  
-    • A characteristic outcome of an experiment on which information is to be gathered or obtained  
-    • The outcomes of a true experiment should be random, so a dependent variable is implicitly a random variable  
-    • There is a probability distribution associated with different kinds of random variables:  
-        • Normal, Poisson, Binomial, etc.
 
 ##
 
@@ -52,13 +50,14 @@
 ------
 
 * Scope:
-  * Test the closed room environment that will be used for additional future testing.
-       The purpose of this test is to quantify the natural decay rate of particulate matter & VOC concentration in our test room without our air purifier on. The goal is to determine the current enviromental air exchange rate so that we can establish a baseline concentration profile to ensure that measured pollutant decay during future tests is correctly attributed to our air purifier rather than natural ventilation.
+    * Test the closed room environment that will be used for additional future testing.
+
+      The purpose of this test is to quantify the natural decay rate of particulate matter & VOC concentration in our test room without our air purifier on. The goal is to determine the current enviromental air exchange rate so that we can establish a baseline concentration profile to ensure that measured pollutant decay during future tests is correctly attributed to our air purifier rather than natural ventilation.
 
   * Defined Parameters & Justification
 
        Parameter | Justification
-       --- | ---
+       :--- | :---:
        PM 1.0 | -
        PM 2.5 | -
        PM 4.0 | -
@@ -68,118 +67,125 @@
        Relative Humidity | -
        Time | -
 
-  * Hypothesis
-       In a close room with no purification, particulate matter will decay slowly. The natural decay will be significantly smaller than the decay observed during active purification. And VOC levels will remain relatively stable with the absence of an active purification source.
+    * Hypothesis
+
+      In a close room with no purification, particulate matter will decay slowly. The natural decay will be significantly smaller than the decay observed during active purification. And VOC levels will remain relatively stable with the absence of an active purification source.
 
 * Administrative Details:
-  * Date & Location: TBD
-  * Requested By: X
-  * Conducted By: Y
+    * Date & Location: TBD
+    * Requested By: X
+    * Conducted By: Y
+ 
+* Design of Experiment:
+    * A single factor observational decay test. Helps us establish a natural baseline decay rate. Also ensures the validity of our future purifcation test results.
+    * Test Apparatus & Equipment:
+        * Plantower PMS5003 & Sensirion SEN54 sensors
+        * Measuring Tape (for room dimensions)
+        * Stopwatch (could use microcontroller timestamps)
+    * Independent & Dependent Variables:
+        * _Independent:_ Time
+        * _Dependent:_ PM(1.0/2.5/4.0/10) concentration; VOC index; Temperature; Relative Humidity
+    * Number of Factors Considered:
+        * Single-factor (time). No active purification & No fan speed configuration needed.
+    * Sampling Procedure:
+        * _How are Sample Obtained:_ Measure pollutant levels at natural ambient conditions.
+        * _Number of Samples:_ Record data every 5 seconds or so for ~45 mins, repeat experiment 3 times.
+     
+* Detailed Procedure:
+    * _Safety Precautions:_ Avoid open flames and keep room ventilation airways clear.
+ 
+    1. Measure & record room dimensions.
+    2. Ensure doors are closed.
+    3. Take note of active HVAC (turn off is possible).
+    4. Place sensors:
+        - _X_ ft from wall
+        - _X_ ft from floor
+    5. Turn Air Purifier off and keep unplugged.
+    6. Begin data logging (use timestamps).
+    7. Record PM1.0, PM2.5, PM4.0, PM10, VOC, temperature, humidity continuously.
+    8. After ~45 mins save data.
+    9. Repeat for additional trials.
+
+    * _Observation of External Factors:_ Door openings throughout testing; room temp/humidity; HVAC status
 
 * Design of Experiment:
 
 ##
   
-**Natural Decay & Background Concentration Test**
+**Particulate Matter Removal Efficiency Test**
 ------
+* Scope:
+    * Test our air purification system in a closed room environment under fixed operating modes (constant fan-speeds).
 
-Scope:
+      The purpose of this test is to quantify the rate at which particulate matter is removed during active purification. This will give us data in regards to the time required to achieve ~90% reduction in PM2.5 concentration. We can then use the data from this experiment in tandem with our data from our _Natural Decay Tests_ to obtain a purifier-only decay rate which would allow us to better estimate the Clean Air Delivery Rate (CADR) at different modes.
 
-Administrative Details:
+    * Defined Parameters & Justification
+       Parameter | Justification
+       :--- | :---:
+       PM 1.0 | -
+       PM 2.5 | -
+       PM 4.0 | -
+       PM 10 | -
+       VOC Index | -
+       Time | -
+       Fan Mode | -
+       Room Volume | -
 
-Design of Experiment:
+    * Hypothesis
+ 
+      Particulate matter concentration will follow an exponential decay during active purification. Higher fan speed will produce larger decay rates, and the time to ~90% reduction should decrease as fan speed increases. We expect the purifier-only decay rate to be significantly greater than the baseline decay rate.  
+      
+* Administrative Details:
+    * Date & Location: TBD
+    * Requested By: X
+    * Conducted By: Y
 
-Method:
+* Design of Experiment:
+    * A single-factor decay rate test conducted at 3 fixed operating modes:
+        - Boost Mode ( high fan speed )
+        - Normal Mode ( \<45 dBa fan speed (TBD) )
+        - Sleep Mode ( fixed fan speed corresponding to IAQI \>=81 condition)
+    * Test Apparatus & Equipment:
+        * Air Purifier
+        * Plantower PMS5003 & Sensirion SEN54 sensors
+        * Sound Level Meter
+        * Measuring tape
+    * Independent & Dependent Variables:
+        * _Independent:_ Time; Operating Mode (fan speed)
+        * _Dependent:_ PM(2.5/4.0/10) concentration; VOC index
+    * Number of Factors Considered:
+        * Two-factor: time & operating mode.
+    * Sampling Procedure:
+        * _How are Sample Obtained:_ Turn off HVAC is possible, then introduce a controlled particulate source (aerosol spray/spray paint). Then beginning logging data after ~1 minute (calibration).
+        * _Number of Samples:_ Record data every 5 seconds or so until concentration falls below 10% of initial value, repeat experiment 3 times for each fan speed. 
 
-Apparatus:
+* Detailed Procedure:
+    * _Safety Precautions:_ Use approved particulate sources aka avoid open flames. Ensure fire alarms aren't triggered, use proper mask protections and keep room ventilation airways clear.
+ 
+    1. Measure & record room dimensions.
+    2. Ensure doors are closed.
+    3. Take note of active HVAC (turn off is possible).
+    4. Place sensors:
+ 
+    * _Observation of External Factors:_
 
-Variables:
 
-Procedure:
 
-Step-by-Step Procedure:
 
-Data Collection Method:
+##
+  
+** Noise Emission Test**
+------
+* Scope:
+* Administrative Details:
+* Design of Experiment:
+* Detailed Procedure:
+    * _Safety Precautions:_
+    * _Observation of External Factors:_
 
-External Factors Recorded:
 
-## **MOCK Test 1**
 
-Scope
-
-* Testing the reduction of particle matter concentration with a goal of achieving an IAQI equivalent to AQI \< 50\. Also testing if the system adjusts dynamically based on pollutant levels and if the system can outperform natural ventilation  
-*
-
-| Parameter | Justification |
-| :---- | :---- |
-| PM 1.0 |  |
-| PM 2.5  |  |
-| PM 10 |  |
-| Time to IAQI \>= 81 |  |
-
-* Expect higher fan speeds to reduce particulate concentration faster, and for the system to return to IAQI \>= 81 within half an hour after the pollutant is introduced. And natural ventilation should show significantly slower decay rates in comparison.
-
-Administrative Details:
-
-* Date: TBD; Location: TBH  
-* Requested by:  
-* Conducted by:
-
-Design of Experiment:  
-Two-factor experiment:
-
-* Factor 1: Fan Mode  
-* Factor 2: Ventilation Condition
-
-Method
-
-* Controlled pollutant decay experiment using incense/aerosols/air fresheners as a repeatable particulate source.  
-* Simulate real-world indoor pollutant events and provide statistical repeatability.
-
-Apparatus
-
-* Smart Air purifier prototype  
-* PMS5003 Sensor, SEN54 sensor  
-* Stopwatch  
-* Incense sticks/aerosol
-
-Variables
-
-* Fan speed/mode  
-* Ventilation condition  
-* PM(1.0/ 2.0 /10) concentration  
-* Time to IAQI \>= 81
-
-Procedure
-
-* Same environment used for all trials
-* One incense stick burned for exactly 20 minutes  
-* Purifier activated  
-* Measurements taken every minute or so  
-* Each configuration repeated 3 times
-
-Step-by-Step Procedure:
-
-1. Measure and record beeline PM and IAQI  
-2. Burn an incense stick for 20 minutes  
-3. Allow PM levels to stabilize for 1 minute  
-4. Turn on the Air Purifier at select fan speed  
-5. Start timer  
-6. Record PM(1.0/ 2.0 /10) & IAQI every minute  
-7. Stop timer once IAQI \>= 81  
-8. Record total recovery time  
-9. Ventilate the room for 5 minutes before the next trial  
-10. Repeat for all configurations
-
-Data Collection Method
-
-* Log data using esp  
-* PM, IAQI  vs Time graphs
-
-External Factors Recorded
-
-* Room temp and humidity
-* Current ventilation condition
+##
 
 ## **Fan Configuration Test**
 
