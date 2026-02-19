@@ -58,14 +58,15 @@
 
        Parameter | Justification
        :--- | :---:
-       PM 1.0 | -
+       PM 1.0 | Captures ultrafine particulates; useful for combustion/aerosol characterization and size-dependent decay
        PM 2.5 | Primary health-impact metric per EPA standards
-       PM 4.0 | -
+       PM 4.0 | Intermediate particle bin to observe size-dependent settling/removal behavior
        PM 10 | Measures larger particulates not captured in PM2.5
-       VOC Index | Evaluates carbon filter effectiveness
-       Temperature | Affects sensor calibration and air density
-       Relative Humidity | Influences particle aggregation behavior
-       Time | -
+       VOC Index | Establishes baseline VOC behavior; used to separate purifier impact from natural room changes
+       Temperature | Affects sensor response and air density; controls for environmental drift
+       Relative Humidity | Influences particle growth/aggregation and VOC sensor behavior
+       Time | Required to estimate decay constant and air exchange rate baseline
+
 
     * Hypothesis
 
