@@ -1,29 +1,29 @@
-## Test Plans Outline
+#### Test Plans Outline
 
 • Scope:  
-• Identify the system and goal/purpose of each test  
-• Define parameters for each test and justify inclusion  
-• State expectations of the test ( the Hypothesis \- see later slide )  
+    • Identify the system and goal/purpose of each test  
+    • Define parameters for each test and justify inclusion  
+    • State expectations of the test ( the Hypothesis \- see later slide )  
 • Administrative Details:  
-• Date and Location of Testing  
-• Client or Organization that requested the test  
-• Who is conducting the test  
+    • Date and Location of Testing  
+    • Client or Organization that requested the test  
+    • Who is conducting the test  
 • Design of each test (a.k.a. Design of Experiment)  
-• Type of testing method and its significance  
-• List of test apparatus and measurement equipment, model \#s, etc…  
-• Identify ‘dependent’ and ‘independent’ variables ( see later slide )  
-• Number of factors considered (single, double (factorial), etc.)  
-• Sampling procedure:  
-• How are samples obtained?  
-• Number of samples  
+    • Type of testing method and its significance  
+    • List of test apparatus and measurement equipment, model \#s, etc…  
+    • Identify ‘dependent’ and ‘independent’ variables ( see later slide )  
+    • Number of factors considered (single, double (factorial), etc.)  
+    • Sampling procedure:  
+        • How are samples obtained?  
+        • Number of samples  
 • Detailed, step-by-step procedure to conduct each test  
-• Safety precautions  
-• Data collection method  
-• Written, recorded, digital, etc.  
-• Observation of external factors  
-• Temperature, wind, noise, vibration, etc.
+    • Safety precautions  
+    • Data collection method  
+        • Written, recorded, digital, etc.  
+    • Observation of external factors  
+        • Temperature, wind, noise, vibration, etc.
 
-## Design Of Engineering Experiments
+#### *Design Of Engineering Experiments*
 
 • Formal Hypothesis:  
 • A formal statement of what the experimenter expects to find in the data  
@@ -35,18 +35,76 @@
 • Example:  
 “There will be no difference in the percentage failures between samples that were heat-treated, and those that were not.”
 
-##
-
-## Test Variables
+#### *Test Variables*
 
 • Independent Variable:  
-• Is a controllable experimental variable  
-• By changing an Independent Variable, we seek to see if that contributes to a change in a Dependent Variable  
+    • Is a controllable experimental variable  
+    • By changing an Independent Variable, we seek to see if that contributes to a change in a Dependent Variable  
 • Dependent Variable (Response Variable):  
-• A characteristic outcome of an experiment on which information is to be gathered or obtained  
-• The outcomes of a true experiment should be random, so a dependent variable is implicitly a random variable  
-• There is a probability distribution associated with different kinds of random variables:  
-• Normal, Poisson, Binomial, etc.
+    • A characteristic outcome of an experiment on which information is to be gathered or obtained  
+    • The outcomes of a true experiment should be random, so a dependent variable is implicitly a random variable  
+    • There is a probability distribution associated with different kinds of random variables:  
+        • Normal, Poisson, Binomial, etc.
+
+
+
+##
+
+**Natural Decay & Background Concentration Test**
+------
+* Scope:
+    * Test the closed room environment that will be used for additional future testing.
+       The purpose of this test is to quantify the natural decay rate of particulate matter & VOC concentration in our test room without our air purifier on. The goal is to determine the current enviromental air exchange rate so that we can establish a baseline concentration profile to ensure that measured pollutant decay during future tests is correctly attributed to our air purifier rather than natural ventilation.
+
+    * Defined Parameters & Justification
+       Parameter | Justification
+       --- | ---
+       PM 1.0 | -
+       PM 2.5 | -
+       PM 4.0 | -
+       PM 10 | -
+       VOC Index | -
+       Temperature | -
+       Relative Humidity | -
+       Time | -
+
+    * Hypothesis
+       In a close room with no purification, particulate matter will decay slowly. The natural decay will be significantly smaller than the decay observed during active purification. And VOC levels will remain relatively stable with the absence of an active purification source.
+
+* Administrative Details:
+    * Date & Location: TBD
+    * Requested By: X
+    * Conducted By: Y
+ 
+* Design of Experiment:
+
+
+##
+  
+**Natural Decay & Background Concentration Test**
+------
+Scope:
+
+Administrative Details:
+
+Design of Experiment:
+
+Method:
+
+Apparatus:
+
+Variables:
+
+Procedure:
+
+Step-by-Step Procedure:
+
+Data Collection Method:
+
+External Factors Recorded:
+
+
+
 
 ## **MOCK Test 1**
 
@@ -125,6 +183,10 @@ External Factors Recorded
 
 - Room temp and humidity
 - Current ventilation condition
+
+
+
+##
 
 ## **Fan Configuration Test**
 
