@@ -123,14 +123,15 @@
     * Defined Parameters & Justification
        Parameter | Justification
        :--- | :---:
-       PM 1.0 | -
+       PM 1.0 | Tracks ultrafine particulate removal; helps compare size-dependent efficiency across modes
        PM 2.5 | Primary health-impact metric per EPA standards
-       PM 4.0 | -
+       PM 4.0 | Intermediate particulate bin for size-dependent efficiency assessment
        PM 10 | Measures larger particulates not captured in PM2.5
-       VOC Index  Evaluates carbon filter effectiveness
-       Time | -
-       Fan Mode | -
-       Room Volume | -
+       VOC Index | Evaluates carbon filter effectiveness (secondary metric during PM-focused test)
+       Time | Required to fit exponential decay and compute removal rate
+       Fan Mode | Determines airflow rate; primary controllable factor influencing decay constant
+       Room Volume | Needed to compute CADR from purifier-only decay constant
+
 
     * Hypothesis
  
@@ -344,15 +345,16 @@ Scope:
 
 | Parameter         | Justification                                    |
 | ----------------- | ------------------------------------------------ |
-| Voltage           |         |
-| Current           |                |
-| Power (Watts)     |                 |
-| Energy (Wh)       |     |
-| PM 2.5            |            Primary health-impact metric per EPA standards
-| VOC Index         |              |
-| Time to IAQI ≥ 81 |   |
-| Fan PWM / RPM     |      |
-| Fan Configuration |  |
+| Voltage           | Verifies regulated supply stability under each load condition |
+| Current           | Used with voltage to compute power; validates wiring/regulator limits |
+| Power (Watts)     | Primary instantaneous consumption metric |
+| Energy (Wh)       | Measures real usage over time; supports efficiency comparison |
+| PM 2.5            | Links power draw to cleaning performance (efficiency metric) |
+| VOC Index         | Links power draw to VOC removal behavior (if applicable) |
+| Time to IAQI ≥ 81 | Efficiency metric: energy required to reach acceptable air quality |
+| Fan PWM / RPM     | Ensures consistent operating points across trials |
+| Fan Configuration | Determines airflow resistance and power-efficiency tradeoffs |
+
 
 Expectations
  -
