@@ -58,7 +58,7 @@
 
        Parameter | Justification
        :--- | :---:
-       PM 1.0 | -
+       PM 1.0 | Primary health-impact metric per EPA standards
        PM 2.5 | -
        PM 4.0 | -
        PM 10 | -
