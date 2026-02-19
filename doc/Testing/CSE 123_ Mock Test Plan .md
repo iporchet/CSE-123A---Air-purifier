@@ -125,8 +125,8 @@
        PM 1.0 | -
        PM 2.5 | Primary health-impact metric per EPA standards
        PM 4.0 | -
-       PM 10 | -
-       VOC Index | -
+       PM 10 | Measures larger particulates not captured in PM2.5
+       VOC Index  Evaluates carbon filter effectiveness
        Time | -
        Fan Mode | -
        Room Volume | -
@@ -197,8 +197,8 @@ Scope:
 | ----------------- | --------------------------------------- |
 | PM 1.0            |           |
 | PM 2.5            |  Primary health-impact metric per EPA standards
-| PM 10             |       |
-| VOC Index         |   |
+| PM 10             |       Measures larger particulates not captured in PM2.5
+| VOC Index         |   Evaluates carbon filter effectiveness
 | Time to IAQI ≥ 81 |        |
 | Fan RPM / PWM     |           |
 
@@ -275,7 +275,7 @@ Scope:
 | :---- | :---- |
 | PM 1.0 |  |
 | PM 2.5  Primary health-impact metric per EPA standards  |
-| PM 10 |  |
+| PM 10 Measures larger particulates not captured in PM2.5  |
 | TVOC  |  |
 | Time to IAQI \>= 81 |  |
 
