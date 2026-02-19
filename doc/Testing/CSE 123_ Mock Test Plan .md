@@ -195,14 +195,14 @@ Scope:
 
 * The purpose of this test is to compare the effectiveness of different fan configurations: series and parallel as well as filter placement. The test will evaluate performance differences in airflow, filtration efficiency, and pollutant reduction to determine which configuration provides better purification performance.
 
-| Parameter         | Justification                           |
+| Parameter         | Justification |
 | ----------------- | --------------------------------------- |
-| PM 1.0            |           |
-| PM 2.5            |  Primary health-impact metric per EPA standards
-| PM 10             |       Measures larger particulates not captured in PM2.5
-| VOC Index         |   Evaluates carbon filter effectiveness
-| Time to IAQI ≥ 81 |        |
-| Fan RPM / PWM     |           |
+| PM 1.0            | Enables size-dependent performance comparison and captures ultrafine particle behavior |
+| PM 2.5            | Primary health-impact metric per EPA standards and main performance indicator |
+| PM 10             | Measures larger particulates to evaluate coarse particle removal efficiency |
+| VOC Index         | Evaluates effectiveness of activated carbon filtration |
+| Time to IAQI ≥ 81 | Quantifies recovery time and overall purification performance |
+| Fan RPM / PWM     | Confirms consistent operating conditions and validates airflow differences between configurations |
 
 Expectations
 
@@ -275,11 +275,12 @@ Scope:
 
 | Parameter | Justification |
 | :---- | :---- |
-| PM 1.0 |  |
-| PM 2.5  Primary health-impact metric per EPA standards  |
-| PM 10 Measures larger particulates not captured in PM2.5  |
-| TVOC  |  |
-| Time to IAQI \>= 81 |  |
+| PM 1.0 | Detects ultrafine particle spikes and assists in pollutant-type classification |
+| PM 2.5 | Primary health-impact metric per EPA standards and main control threshold variable |
+| PM 10 | Detects coarse particulate changes to support adaptive control decisions |
+| TVOC | Identifies VOC-dominant events to trigger carbon-filter prioritization |
+| Time to IAQI ≥ 81 | Measures recovery time under dynamic control and evaluates responsiveness performance |
+
 
 * It is expected that when pollutants are introduced, the system will adjust fan speed to properly filter pollutants. If predominantly VOCs are detected, the system should adjust to so that filtering through the activated carbon filter is prioritized. If predominantly particulate matter is detected, the system should adjust to prioritize filtering through the HEPA filter.
 
