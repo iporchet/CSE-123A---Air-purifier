@@ -58,13 +58,13 @@
 
        Parameter | Justification
        :--- | :---:
-       PM 1.0 | Primary health-impact metric per EPA standards
-       PM 2.5 | -
+       PM 1.0 | -
+       PM 2.5 | Primary health-impact metric per EPA standards
        PM 4.0 | -
-       PM 10 | -
-       VOC Index | -
-       Temperature | -
-       Relative Humidity | -
+       PM 10 | Measures larger particulates not captured in PM2.5
+       VOC Index | Evaluates carbon filter effectiveness
+       Temperature | Affects sensor calibration and air density
+       Relative Humidity | Influences particle aggregation behavior
        Time | -
 
     * Hypothesis
@@ -123,7 +123,7 @@
        Parameter | Justification
        :--- | :---:
        PM 1.0 | -
-       PM 2.5 | -
+       PM 2.5 | Primary health-impact metric per EPA standards
        PM 4.0 | -
        PM 10 | -
        VOC Index | -
@@ -196,7 +196,7 @@ Scope:
 | Parameter         | Justification                           |
 | ----------------- | --------------------------------------- |
 | PM 1.0            |           |
-| PM 2.5            |  |
+| PM 2.5            |  Primary health-impact metric per EPA standards
 | PM 10             |       |
 | VOC Index         |   |
 | Time to IAQI ≥ 81 |        |
@@ -274,7 +274,7 @@ Scope:
 | Parameter | Justification |
 | :---- | :---- |
 | PM 1.0 |  |
-| PM 2.5  |  |
+| PM 2.5  Primary health-impact metric per EPA standards  |
 | PM 10 |  |
 | TVOC  |  |
 | Time to IAQI \>= 81 |  |
@@ -347,7 +347,7 @@ Scope:
 | Current           |                |
 | Power (Watts)     |                 |
 | Energy (Wh)       |     |
-| PM 2.5            |            |
+| PM 2.5            |            Primary health-impact metric per EPA standards
 | VOC Index         |              |
 | Time to IAQI ≥ 81 |   |
 | Fan PWM / RPM     |      |
