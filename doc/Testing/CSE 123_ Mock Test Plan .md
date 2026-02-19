@@ -48,12 +48,14 @@
 
 **Natural Decay & Background Concentration Test**
 ------
+
 * Scope:
     * Test the closed room environment that will be used for additional future testing.
 
       The purpose of this test is to quantify the natural decay rate of particulate matter & VOC concentration in our test room without our air purifier on. The goal is to determine the current enviromental air exchange rate so that we can establish a baseline concentration profile to ensure that measured pollutant decay during future tests is correctly attributed to our air purifier rather than natural ventilation.
 
-    * Defined Parameters & Justification
+  * Defined Parameters & Justification
+
        Parameter | Justification
        :--- | :---:
        PM 1.0 | -
@@ -106,6 +108,7 @@
 
     * _Observation of External Factors:_ Door openings throughout testing; room temp/humidity; HVAC status
 
+* Design of Experiment:
 
 ##
   
@@ -188,35 +191,59 @@
 
 Scope:
 
-- Comparing the effectiveness of series vs parallel fans in reducing PM concentrations and VOCs
+* The purpose of this test is to compare the effectiveness of different fan configurations: series and parallel as well as filter placement. The test will evaluate performance differences in airflow, filtration efficiency, and pollutant reduction to determine which configuration provides better purification performance.
 
-| Parameter | Justification |
-| :---- | :---- |
+| Parameter         | Justification                           |
+| ----------------- | --------------------------------------- |
+| PM 1.0            |           |
+| PM 2.5            |  |
+| PM 10             |       |
+| VOC Index         |   |
+| Time to IAQI ≥ 81 |        |
+| Fan RPM / PWM     |           |
 
 Expectations
- -
+
+* Fans in series are expected to generate higher static pressure and improved airflow through restrictive filters, resulting in faster pollutant reduction compared to parallel configuration. Parallel configuration may produce higher airflow in low-resistance conditions but reduced effectiveness with dense filters. Configurations where fans are positioned after the filter (pull configuration) are expected to produce more uniform airflow and improved filtration efficiency compared to push configurations.
 
 Administrative Details:
 
-- Date: TBD; Location: TBH
-- Requested by:
-- Conducted by:
+* Date: TBD; Location: TBH
+* Requested by:
+* Conducted by:
 
 Design of Experiment
- -
+
+* Two-factor experiment:
+  * Factor 1: Fan configuration / placement
+    * Series configurations (3 layouts)
+    * Parallel configurations (2 layouts)
+  * Factor 2: Ventilation condition
+    * Closed room
+    * Partial ventilation (door slightly open)
 
 Method:
 
+* A controlled pollutant source will be introduced into the testing environment. Each fan configuration will then be activated while monitoring particulate matter and VOC concentration decay over time. Performance will be compared across configurations using recovery time and decay rate metrics.
+
 Apparatus:
 
-- Two different testing rigs will be constructed with one that places the fans in series with the filter in between and another that places the fans in parallel with the filters below. Both rigs will be tested under the same conditions to compare their effectiveness.
+* Testing rigs, that allows for the following configurations to test airflow in the filter:
+  * Series:
+    * Intake->Fan->Filter->Fan->Exhaust
+    * Intake->Fan->Fan->Filter->Exhaust
+    * Intake->Filter->Fan->Fan->Exhaust
+
+  * Parallel:
+    * Intake-> Fan | Fan -> Filter -> Exhaust
+    * Intake-> Filter -> Fan | Fan -> Exhaust
 
 Variables
 
-- Fan configuration (series vs parallel)
-- Ventilation condition
-- PM(1.0/ 2.0 /10) concentration
-- TVOC concentration
+* Fan configuration
+* Ventilation condition
+* PM(1.0/ 2.0 /10) concentration
+* TVOC concentration
 
 Procedure
   1.
@@ -224,11 +251,25 @@ Procedure
 Step-by-Step Procedure
   1.
 
+Data Collection:
+
+* ESP32 sensor logs with timestamps
+* PM and VOC vs time graphs
+* Recovery time comparison between configurations
+* Decay rate slope calculations
+* Fan PWM/RPM verification logs
+* External Factors Recorded:
+
+External Factors:
+
+* Room temperature and humidity
+* Ventilation status (door/window condition)
+
 ## **Responsiveness Test**
 
 Scope:
 
-- Testing the responsiveness of the system to dynamically adjust filtration based on air quality readings
+* Testing the responsiveness of the system to dynamically adjust filtration based on air quality readings
 
 | Parameter | Justification |
 | :---- | :---- |
@@ -238,34 +279,34 @@ Scope:
 | TVOC  |  |
 | Time to IAQI \>= 81 |  |
 
-- It is expected that when pollutants are introduced, the system will adjust fan speed to properly filter pollutants. If predominantly VOCs are detected, the system should adjust to so that filtering through the activated carbon filter is prioritized. If predominantly particulate matter is detected, the system should adjust to prioritize filtering through the HEPA filter.
+* It is expected that when pollutants are introduced, the system will adjust fan speed to properly filter pollutants. If predominantly VOCs are detected, the system should adjust to so that filtering through the activated carbon filter is prioritized. If predominantly particulate matter is detected, the system should adjust to prioritize filtering through the HEPA filter.
 
 Administrative Details:
 
-- Date: TBD; Location: TBH
-- Requested by:
-- Conducted by:
+* Date: TBD; Location: TBH
+* Requested by:
+* Conducted by:
 
 Design of Experiment:
 
-- Two factor experiment:
-  - Factor 1: Fan speed/mode
-  - Factor 2: Pollutant type (particulate vs VOC)
+* Two factor experiment:
+  * Factor 1: Fan speed/mode
+  * Factor 2: Pollutant type (particulate vs VOC)
 
 Method:
 
-- System sensitivity test utilizing controlled pollutant introduction and monitoring system response.
+* System sensitivity test utilizing controlled pollutant introduction and monitoring system response.
 
 Apparatus:
 
-- In a Filter cartridge prototype, the PWM fans will placed in series with the HEPA H13 filter being place in between them. The filter will be placed with the activated carbon side facing towards the intake of the system.
+* In a Filter cartridge prototype, the PWM fans will placed in series with the HEPA H13 filter being place in between them. The filter will be placed with the activated carbon side facing towards the intake of the system.
 
 Variables:
 
-- Fan Speeds/Mode
-- Pollutant Type (Particulate vs VOC)
-- Ventilation Condition
-- Distance from pollutant source
+* Fan Speeds/Mode
+* Pollutant Type (Particulate vs VOC)
+* Ventilation Condition
+* Distance from pollutant source
 
 Procedure:
 
@@ -286,36 +327,40 @@ Step-by-Step Procedure:
 
 Data Collection Method:
 
-- Utilizing sensor readings and ESP32 log data to acquire timestamps of events
+* Utilizing sensor readings and ESP32 log data to acquire timestamps of events
 
 External Factors Recorded:
 
-- Room temperature and humidity
-- Natural ventilation condition
-- Baseline pollutant levels before introduction of pollutants
+* Room temperature and humidity
+* Natural ventilation condition
+* Baseline pollutant levels before introduction of pollutants
 
 ## Power Consumption Test
 
 Scope:
 
-- Test the power consumption of the system with constant fan speeds as well as dynamically adjusting fan speeds based on pollutant levels.
+* Test the power consumption of the system with constant fan speeds as well as dynamically adjusting fan speeds and different fan configurations.
 
-| Parameter | Justification |
-| :---- | :---- |
-| PM 1.0 |  |
-| PM 2.5  |  |
-| PM 10 |  |
-| TVOC  |  |
-| Time to IAQI \>= 81 |  |
+| Parameter         | Justification                                    |
+| ----------------- | ------------------------------------------------ |
+| Voltage           |         |
+| Current           |                |
+| Power (Watts)     |                 |
+| Energy (Wh)       |     |
+| PM 2.5            |            |
+| VOC Index         |              |
+| Time to IAQI ≥ 81 |   |
+| Fan PWM / RPM     |      |
+| Fan Configuration |  |
 
 Expectations
  -
 
 Administrative Details:
 
-- Date: TBD; Location: TBH
-- Requested by:
-- Conducted by:
+* Date: TBD; Location: TBH
+* Requested by:
+* Conducted by:
 
 Design of Experiment:
 
@@ -323,7 +368,24 @@ Method:
 
 Apparatus:
 
+* Testing rig that allows for running of the filter system in different fan configurations to test power efficiency. Fan configurations include:
+  * Series:
+    * Intake->Fan->Filter->Fan->Exhaust
+    * Intake->Fan->Fan->Filter->Exhaust
+    * Intake->Filter->Fan->Fan->Exhaust
+
+  * Parallel:
+    * Intake-> Fan | Fan -> Filter -> Exhaust
+    * Intake-> Filter -> Fan | Fan -> Exhaust
+
 Variables:
+
+* Fan configuration
+* Control mode (constant vs dynamic)
+* Fan PWM level (if applicable)
+* Power consumption (W)
+* Energy usage (Wh)
+* PM and VOC decay rate
 
 Procedure:
 
@@ -331,4 +393,10 @@ Step-by-Step Procedure:
 
 Data Collection Method:
 
+* ESP32 logs of fan speeds and Sensor readings
+
 External Factors Recorded:
+
+* Room temperature
+* Relative humidity
+* Ventilation condition
