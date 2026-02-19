@@ -338,6 +338,62 @@ External Factors Recorded:
 * Natural ventilation condition
 * Baseline pollutant levels before introduction of pollutants
 
+## HTTP Request Handling & Network Robustness Test
+
+* Scope:
+    * Test the reliability, latency, and fault tolerance of the HTTP communication pipeline between the ESP32-C3 microcontroller and the Raspberry Pi 4 server.
+
+      The purpose of this test is to verify that the ESP32 successfully sends sensor data via HTTP POST every 5 seconds and accurately parses piggybacked fan commands in the response. Additionally, it will evaluate how the system handles network interruptions to ensure the ESP32 does not crash and can maintain local auto-control when the server is unreachable.
+
+    * Defined Parameters & Justification:
+
+       Parameter | Justification
+       :--- | :---:
+       Request Latency | Measures the round-trip time for data delivery and command retrieval
+       Packet Success Rate | Ensures data integrity over the local WiFi network
+       Reconnection Time | Evaluates system recovery speed after a network drop
+
+    * Hypothesis:
+
+      Under normal network conditions, the ESP32 will successfully transmit data and receive commands with a round-trip latency of under 500ms. If the WiFi network or RPi4 server is disconnected, the ESP32 will handle the HTTP timeout gracefully, continue operating the fans using local AQI thresholds, and automatically resume POST requests once the connection is restored without requiring a manual reboot.
+
+* Administrative Details:
+    * Date & Location: TBD
+    * Requested By: X
+    * Conducted By: Y
+ 
+* Design of Experiment:
+    * A two-factor system integration test evaluating communication performance under normal and interrupted network conditions.
+    * Test Apparatus & Equipment:
+        * ESP32-C3 DevKit (running firmware)
+        * Raspberry Pi 4 
+        * WiFi Router
+        * Server logs 
+    * Independent & Dependent Variables:
+        * _Independent:_ Network connectivity status; Server response payload (empty vs. fan command included)
+        * _Dependent:_ HTTP request latency (ms); ESP32 crash/reboot events; Fan RPM change delay
+    * Number of Factors Considered:
+        * Two-factor: Network state (Connected vs. Disconnected) & Command State (Idle vs. Active Command).
+    * Sampling Procedure:
+        * _How are Samples Obtained:_ Monitor server logs and ESP32 serial output while running the device, sending periodic app commands, and physically toggling the router.
+        * _Number of Samples:_ Record 100 consecutive requests for baseline latency. Perform 5 network drop-and-recovery cycles.
+     
+* Detailed Procedure:
+
+ 
+    1. Power on the RPi4 server and local WiFi router.
+    2. Power on the ESP32 and ensure it connects to the network.
+    3. Monitor the RPi4 server logs and record the timestamp and latency of the 5-second HTTP POST requests for 10 minutes (baseline).
+    4. Using the API/Mobile app, queue a fan speed override command.
+    5. Time the delay between the server receiving the command and the ESP32 physically adjusting the fan PWM (should occur on the next 5-second interval).
+    6. Disconnect the WiFi router from power (simulate network drop).
+    7. Observe the ESP32 via Serial Monitor. Verify it logs HTTP timeouts/connection failures but continues reading the SEN54 sensor and running local auto-fan logic.
+    8. Leave disconnected for 2 minutes.
+    9. Power the WiFi router back on and record how long it takes for the ESP32 to successfully resume sending HTTP POST requests.
+    10. Save server logs and serial outputs for analysis.
+
+
+
 ## Power Consumption Test
 
 Scope:
