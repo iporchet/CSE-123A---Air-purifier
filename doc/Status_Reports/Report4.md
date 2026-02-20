@@ -7,7 +7,6 @@ Individual Work
 
 
 - **Randall**
-- 
 ### Work Completed
 
 - During Week 4, I focused on strengthening the technical rigor and completeness of our air purifier testing framework. I revised the test plan to ensure that each experiment includes clearly defined parameters, justified variable selection, formal hypotheses, and measurable performance metrics. I corrected table formatting inconsistencies, filled in missing justifications for PM size bins (PM1.0, PM2.5, PM10), VOC index tracking, and system performance indicators such as Time to IAQI ≥ 81.
