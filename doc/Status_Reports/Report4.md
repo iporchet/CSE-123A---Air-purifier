@@ -34,6 +34,16 @@ Future Work
         * Begin Firebase integration for remote monitoring.
         * Work on noise level test plan for the test documentation.
         * Add more tasks to backlog.
+    
+- **Eduardo**
+    - Worked on:
+        * Created skeleton files for the mobile app. We are going to be using React Native to ensure cross platform compatability. IOS and Android users will be able to use the app.
+        * Researched different backend services we could use for our users. Currently Firebase may be the easiest and reliable backend service for our app.
+        * Researched ways to install our mobile app without having to host it on the app/play store. We can create an apk file and install it directly.
+    - Future Work:
+        * Create a figma design for the mobile app.
+        * Create tasks for backlog for software development.
+        * Research other smart purifying applications to see what features we could add.
 
 
 - Isaiah
