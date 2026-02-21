@@ -28,3 +28,15 @@ Future Work
         * Help with preliminary ESP32 sensor integration to detect temperature & humidity as we await the arrival of the particulate matter sensors.
         * Learn how the MCU interacts with the cloud server & mobile app to better assist with those aspects of the system. 
         * Add more items to backlog.
+
+- **Ryan**
+    - Worked on:
+        * Created early documentation and compilation script. Different items stored in different md files and can be compiled using compile.sh
+        * Created a high level digital schematic of air purifier and its connectivity to cloud server.
+        * Researched cloud services (Firebase, AWS IoT, MQTT brokers, Supabase) and documented pros/cons of each for remote access.
+        * Added remote access section to documentation explaining the local-network limitation and cloud relay approaches.
+    - Future Work:
+        * Create skeleton code for the server.
+        * Begin Firebase integration for remote monitoring.
+        * Work on noise level test plan for the test documentation.
+        * Add more tasks to backlog.

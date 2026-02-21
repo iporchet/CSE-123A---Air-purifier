@@ -1,0 +1,1 @@
+![Air Purifier Schematic](air_purifier_schematic.svg)

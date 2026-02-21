@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5B7FA5"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5B7FA5"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="fanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5DA5E8"/>
+      <stop offset="100%" stop-color="#3A7CC2"/>
+    </linearGradient>
+    <linearGradient id="filterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8BC98B"/>
+      <stop offset="100%" stop-color="#5EA85E"/>
+    </linearGradient>
+    <linearGradient id="sensorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5C842"/>
+      <stop offset="100%" stop-color="#D4A520"/>
+    </linearGradient>
+    <linearGradient id="mcuGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E87D5D"/>
+      <stop offset="100%" stop-color="#C95A3A"/>
+    </linearGradient>
+    <linearGradient id="wifiGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7B68EE"/>
+      <stop offset="100%" stop-color="#5A4FCF"/>
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A8D8EA"/>
+      <stop offset="100%" stop-color="#6BB7D4"/>
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#444"/>
+      <stop offset="100%" stop-color="#222"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="700" fill="#F7F9FC" rx="16"/>
+
+  <!-- Title -->
+  <text x="550" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#2C3E50">Air Purifier System — High-Level Schematic</text>
+
+  <!-- ===== AIR PURIFIER ENCLOSURE ===== -->
+  <rect x="40" y="75" width="420" height="580" rx="18" fill="#FFFFFF" stroke="#B0BEC5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="250" y="108" text-anchor="middle" font-size="17" font-weight="700" fill="#2C3E50">Air Purifier Unit</text>
+
+  <!-- Air flow labels -->
+  <text x="250" y="140" text-anchor="middle" font-size="11" fill="#78909C" font-style="italic">Air Flow Direction  ↓</text>
+
+  <!-- FAN 1 (Intake) -->
+  <rect x="80" y="158" width="340" height="80" rx="12" fill="url(#fanGrad)" filter="url(#shadow)"/>
+  <text x="250" y="192" text-anchor="middle" font-size="15" font-weight="600" fill="#FFF">Intake Fan</text>
+  <text x="250" y="212" text-anchor="middle" font-size="11" fill="#D6EAFF">Pulls ambient air into unit</text>
+  <!-- fan icon -->
+  <g transform="translate(110, 178)" fill="none" stroke="#FFF" stroke-width="1.5">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 2C12 2 16 8 12 12C8 8 12 2 12 2Z"/>
+    <path d="M22 12C22 12 16 16 12 12C16 8 22 12 22 12Z"/>
+    <path d="M12 22C12 22 8 16 12 12C16 16 12 22 12 22Z"/>
+    <path d="M2 12C2 12 8 8 12 12C8 16 2 12 2 12Z"/>
+  </g>
+
+  <!-- Arrow fan→filter -->
+  <line x1="250" y1="238" x2="250" y2="268" stroke="#5B7FA5" stroke-width="2" marker-end="url(#arrow-down)"/>
+
+  <!-- FILTER -->
+  <rect x="80" y="272" width="340" height="100" rx="12" fill="url(#filterGrad)" filter="url(#shadow)"/>
+  <!-- filter mesh pattern -->
+  <g opacity="0.2">
+    <line x1="80" y1="290" x2="420" y2="290" stroke="#FFF" stroke-width="1"/>
+    <line x1="80" y1="305" x2="420" y2="305" stroke="#FFF" stroke-width="1"/>
+    <line x1="80" y1="320" x2="420" y2="320" stroke="#FFF" stroke-width="1"/>
+    <line x1="80" y1="335" x2="420" y2="335" stroke="#FFF" stroke-width="1"/>
+    <line x1="80" y1="350" x2="420" y2="350" stroke="#FFF" stroke-width="1"/>
+    <line x1="80" y1="365" x2="420" y2="365" stroke="#FFF" stroke-width="1"/>
+    <line x1="120" y1="272" x2="120" y2="372" stroke="#FFF" stroke-width="1"/>
+    <line x1="160" y1="272" x2="160" y2="372" stroke="#FFF" stroke-width="1"/>
+    <line x1="200" y1="272" x2="200" y2="372" stroke="#FFF" stroke-width="1"/>
+    <line x1="240" y1="272" x2="240" y2="372" stroke="#FFF" stroke-width="1"/>
+    <line x1="280" y1="272" x2="280" y2="372" stroke="#FFF" stroke-width="1"/>
+    <line x1="320" y1="272" x2="320" y2="372" stroke="#FFF" stroke-width="1"/>
+    <line x1="360" y1="272" x2="360" y2="372" stroke="#FFF" stroke-width="1"/>
+    <line x1="400" y1="272" x2="400" y2="372" stroke="#FFF" stroke-width="1"/>
+  </g>
+  <text x="250" y="315" text-anchor="middle" font-size="15" font-weight="600" fill="#FFF">HEPA / Carbon Filter</text>
+  <text x="250" y="338" text-anchor="middle" font-size="11" fill="#E0F5E0">Captures particles &amp; pollutants</text>
+
+  <!-- Arrow filter→fan2 -->
+  <line x1="250" y1="372" x2="250" y2="402" stroke="#5B7FA5" stroke-width="2" marker-end="url(#arrow-down)"/>
+
+  <!-- FAN 2 (Exhaust) -->
+  <rect x="80" y="406" width="340" height="80" rx="12" fill="url(#fanGrad)" filter="url(#shadow)"/>
+  <text x="250" y="440" text-anchor="middle" font-size="15" font-weight="600" fill="#FFF">Exhaust Fan</text>
+  <text x="250" y="460" text-anchor="middle" font-size="11" fill="#D6EAFF">Pushes clean air out</text>
+  <g transform="translate(110, 426)" fill="none" stroke="#FFF" stroke-width="1.5">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 2C12 2 16 8 12 12C8 8 12 2 12 2Z"/>
+    <path d="M22 12C22 12 16 16 12 12C16 8 22 12 22 12Z"/>
+    <path d="M12 22C12 22 8 16 12 12C16 16 12 22 12 22Z"/>
+    <path d="M2 12C2 12 8 8 12 12C8 16 2 12 2 12Z"/>
+  </g>
+
+  <!-- Clean air out label -->
+  <text x="250" y="504" text-anchor="middle" font-size="11" fill="#78909C" font-style="italic">↓  Clean Air Out</text>
+
+  <!-- ===== SENSORS SECTION ===== -->
+  <rect x="60" y="522" width="185" height="120" rx="10" fill="url(#sensorGrad)" filter="url(#shadow)"/>
+  <text x="152" y="550" text-anchor="middle" font-size="14" font-weight="700" fill="#FFF">Sensors</text>
+  <text x="152" y="572" text-anchor="middle" font-size="10" fill="#FFF9E0">PM2.5 / PM10</text>
+  <text x="152" y="588" text-anchor="middle" font-size="10" fill="#FFF9E0">VOC / CO₂</text>
+  <text x="152" y="604" text-anchor="middle" font-size="10" fill="#FFF9E0">Temperature / Humidity</text>
+  <text x="152" y="620" text-anchor="middle" font-size="10" fill="#FFF9E0">Air Quality Index</text>
+
+  <!-- ===== MCU SECTION ===== -->
+  <rect x="255" y="522" width="185" height="120" rx="10" fill="url(#mcuGrad)" filter="url(#shadow)"/>
+  <text x="347" y="550" text-anchor="middle" font-size="14" font-weight="700" fill="#FFF">MCU</text>
+  <text x="347" y="572" text-anchor="middle" font-size="10" fill="#FFE4D6">ESP32 / STM32</text>
+  <text x="347" y="588" text-anchor="middle" font-size="10" fill="#FFE4D6">Fan Speed Control (PWM)</text>
+  <text x="347" y="604" text-anchor="middle" font-size="10" fill="#FFE4D6">Sensor Data Processing</text>
+  <text x="347" y="620" text-anchor="middle" font-size="10" fill="#FFE4D6">Wi-Fi Module</text>
+
+  <!-- Sensor ↔ MCU connection -->
+  <line x1="245" y1="582" x2="255" y2="582" stroke="#7A5A30" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="250" y="576" text-anchor="middle" font-size="8" fill="#78909C">I²C/SPI</text>
+
+  <!-- MCU → Fans dashed lines -->
+  <path d="M440,560 L448,560 L448,445 L420,445" stroke="#C95A3A" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M440,560 L448,560 L448,198 L420,198" stroke="#C95A3A" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#arrow)"/>
+  <text x="456" y="335" font-size="9" fill="#C95A3A" transform="rotate(-90, 456, 335)">PWM Control</text>
+
+  <!-- ===== CONNECTIVITY SECTION ===== -->
+
+  <!-- Wi-Fi -->
+  <rect x="540" y="290" width="150" height="120" rx="14" fill="url(#wifiGrad)" filter="url(#shadow)"/>
+  <!-- wifi icon -->
+  <g transform="translate(592, 310)" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round">
+    <path d="M-18,-6 C-12,-14 12,-14 18,-6"/>
+    <path d="M-12,-1 C-7,-7 7,-7 12,-1"/>
+    <path d="M-5,4 C-2,1 2,1 5,4"/>
+    <circle cx="0" cy="8" r="2" fill="#FFF"/>
+  </g>
+  <text x="615" y="355" text-anchor="middle" font-size="14" font-weight="600" fill="#FFF">Wi-Fi</text>
+  <text x="615" y="375" text-anchor="middle" font-size="10" fill="#DDD6FF">802.11 b/g/n</text>
+  <text x="615" y="392" text-anchor="middle" font-size="10" fill="#DDD6FF">2.4 GHz</text>
+
+  <!-- MCU → Wi-Fi connection -->
+  <line x1="440" y1="582" x2="470" y2="582" stroke="#5B7FA5" stroke-width="2"/>
+  <path d="M470,582 L500,582 L500,350 L540,350" stroke="#5B7FA5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="506" y="470" font-size="9" fill="#5B7FA5" transform="rotate(-90, 506, 470)">TCP/IP / MQTT</text>
+
+  <!-- Cloud -->
+  <g transform="translate(770, 280)" filter="url(#shadow)">
+    <path d="M20,100 C-5,100 -10,75 10,65 C5,40 35,25 60,35 C70,15 105,10 120,30 C145,20 165,40 155,60 C175,65 175,95 150,100 Z" fill="url(#cloudGrad)" stroke="#5A9BB5" stroke-width="1.5"/>
+    <text x="82" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#2C5F7A">Cloud</text>
+    <text x="82" y="88" text-anchor="middle" font-size="9" fill="#3A7A9A">IoT Platform</text>
+  </g>
+
+  <!-- Wi-Fi → Cloud connection -->
+  <line x1="690" y1="350" x2="780" y2="350" stroke="#5B7FA5" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="735" y="340" text-anchor="middle" font-size="9" fill="#5B7FA5">HTTPS / MQTT</text>
+
+  <!-- Phone -->
+  <g transform="translate(970, 275)" filter="url(#shadow)">
+    <rect x="0" y="0" width="70" height="130" rx="12" fill="url(#phoneGrad)"/>
+    <rect x="5" y="18" width="60" height="88" rx="2" fill="#3A8FD6"/>
+    <!-- screen content -->
+    <text x="35" y="42" text-anchor="middle" font-size="8" fill="#FFF" font-weight="600">Air Quality</text>
+    <rect x="12" y="50" width="46" height="8" rx="3" fill="#5BC95B"/>
+    <text x="35" y="57" text-anchor="middle" font-size="5.5" fill="#FFF">AQI: Good</text>
+    <text x="35" y="72" text-anchor="middle" font-size="7" fill="#D6EAFF">PM2.5: 12 μg/m³</text>
+    <text x="35" y="84" text-anchor="middle" font-size="7" fill="#D6EAFF">Temp: 23°C</text>
+    <text x="35" y="96" text-anchor="middle" font-size="7" fill="#D6EAFF">Humidity: 45%</text>
+    <!-- home button -->
+    <circle cx="35" cy="118" r="5" fill="none" stroke="#666" stroke-width="1"/>
+    <!-- notch -->
+    <rect x="22" y="4" width="26" height="6" rx="3" fill="#333"/>
+  </g>
+  <text x="1005" y="425" text-anchor="middle" font-size="13" font-weight="600" fill="#2C3E50">Mobile App</text>
+
+  <!-- Cloud → Phone connection -->
+  <line x1="930" y1="350" x2="970" y2="350" stroke="#5B7FA5" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="950" y="340" text-anchor="middle" font-size="9" fill="#5B7FA5">API</text>
+
+  <!-- ===== LEGEND ===== -->
+  <g transform="translate(540, 480)">
+    <rect x="0" y="0" width="500" height="100" rx="10" fill="#FFF" stroke="#DDE3EA" stroke-width="1"/>
+    <text x="250" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#546E7A">Legend</text>
+    <!-- Row 1 -->
+    <rect x="20" y="36" width="18" height="12" rx="3" fill="url(#fanGrad)"/>
+    <text x="44" y="47" font-size="10" fill="#444">Fan Modules</text>
+    <rect x="140" y="36" width="18" height="12" rx="3" fill="url(#filterGrad)"/>
+    <text x="164" y="47" font-size="10" fill="#444">Filter</text>
+    <rect x="240" y="36" width="18" height="12" rx="3" fill="url(#sensorGrad)"/>
+    <text x="264" y="47" font-size="10" fill="#444">Sensors</text>
+    <rect x="340" y="36" width="18" height="12" rx="3" fill="url(#mcuGrad)"/>
+    <text x="364" y="47" font-size="10" fill="#444">MCU</text>
+    <!-- Row 2 -->
+    <rect x="20" y="62" width="18" height="12" rx="3" fill="url(#wifiGrad)"/>
+    <text x="44" y="73" font-size="10" fill="#444">Wi-Fi</text>
+    <rect x="140" y="62" width="18" height="12" rx="3" fill="url(#cloudGrad)"/>
+    <text x="164" y="73" font-size="10" fill="#444">Cloud Platform</text>
+    <line x1="240" y1="68" x2="268" y2="68" stroke="#5B7FA5" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="276" y="73" font-size="10" fill="#444">Data Flow</text>
+    <line x1="340" y1="68" x2="368" y2="68" stroke="#C95A3A" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="376" y="73" font-size="10" fill="#444">Control Signal</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="550" y="688" text-anchor="middle" font-size="10" fill="#90A4AE">Air Purifier IoT System — High-Level Architecture</text>
+</svg>
