@@ -54,3 +54,11 @@ Future Work
     - Look into testing with different filter types and orientations to test for optimal performance
     - Look into server architecture and APIs for data storage and retrieval
     - Draft CAD designs for variations of system design
+
+- **Ugo**
+    - Worked On:
+        * Created testing plan for how the web server handles requests from the esp
+        * Created decision tables that comparing implementation choices for the project
+    - Future Work:
+        *  Work on Figma mock for the UI of the mobile app for visualizing the data
+        * Look into creating the backend for the app
